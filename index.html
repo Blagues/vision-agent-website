@@ -3,69 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision Agent - Your Next Computer Vision Model</title>
+    <title>Vision Agent</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Vision Agent</h1>
-                <h2 class="hero-subtitle">Your next computer vision model is just one prompt away</h2>
-                <div class="hero-demo">
-                    <div class="chatbox-demo">
-                        <div class="chat-header">
-                            <div class="chat-title">Vision Agent</div>
-                            <div class="status-indicator"></div>
-                        </div>
-                        <div class="chat-messages">
-                            <div class="message user-message">
-                                <div class="message-content">Create a model to detect cars in traffic footage</div>
-                            </div>
-                            <div class="message ai-message">
-                                <div class="message-content">I'll create a car detection model for you. Processing your request...</div>
-                                <div class="typing-indicator">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat-input">
-                            <input type="text" placeholder="Describe your vision task..." readonly>
-                            <button class="send-btn">→</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cta-section">
-                    <button class="cta-button" id="tryNowBtn">Try it now</button>
-                </div>
-            </div>
-        </header>
-
-        <section class="features">
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI-Powered</h3>
-                    <p>Advanced machine learning algorithms create custom computer vision models tailored to your specific needs</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Generate production-ready models in minutes, not months. Skip the complex setup and training process</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Precision Focused</h3>
-                    <p>High-accuracy models that understand context and deliver reliable results for your specific use case</p>
-                </div>
+        <section class="vision">
+            <div class="vision-content">
+                <p>Reinventing Computer Vision.</p>
+                <p>Our mission is to make AI accessible to everyone,</p>
+                <p>democratizing the power of visual intelligence</p>
+                <p>through simple, intuitive interfaces that transform</p>
+                <p>complex problems into elegant solutions.</p>
             </div>
         </section>
 
-        <footer class="footer">
-            <p>&copy; 2024 Vision Agent. Powered by advanced AI technology.</p>
-        </footer>
+        <hr class="separator">
+
+        <section class="founders">
+            <div class="founder">
+                <div class="founder-photo" data-founder="1"></div>
+                <h3>Alex Chen</h3>
+                <p>Co-founder & CEO - AI Research</p>
+            </div>
+            <div class="founder">
+                <div class="founder-photo" data-founder="2"></div>
+                <h3>Sam Rodriguez</h3>
+                <p>Co-founder & CTO - Computer Vision</p>
+            </div>
+            <div class="founder">
+                <div class="founder-photo" data-founder="3"></div>
+                <h3>Jordan Kim</h3>
+                <p>Co-founder & CPO - Product Design</p>
+            </div>
+        </section>
+
+        <hr class="separator">
+
+        <section class="background">
+            <div class="background-content">
+                <p>We are three engineers who met at Stanford and have been working together
+                for over five years. Our shared passion for artificial intelligence and
+                computer vision led us to create Vision Agent after seeing the barriers
+                that prevent developers from leveraging the full potential of AI in their
+                applications.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal for founder stories -->
+    <div id="founderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <h2 id="modalName"></h2>
+                <div id="modalStory"></div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
