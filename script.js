@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const founderStories = {
         1: {
             name: "Felipe",
-            email: "felipe@visionagent.ai",
-            linkedin: "https://linkedin.com/in/felipe-placeholder",
+            email: "fbononibello@gmail.com",
+            linkedin: "https://www.linkedin.com/in/felipe-bononi-bello-6a8362201/",
             story: `
-                <p>[Placeholder for Felipe's story - TU Delft background, AI university team experience, CEO role, vision for the company]</p>
-                <p>[Add details about Felipe's specific contributions to the project and leadership experience]</p>
-                <p>[Personal interests and background information]</p>
+                <p>Felipe is passionate about making complex technology simple and accessible for everyone. At InstantVision, he believes anyone should be able to add powerful computer vision to their ideas—no coding required. If you have something you wish your camera could detect, he wants to hear about it.</p>
+                <p>Felipe discovered his love for programming as an Aerospace Engineering undergraduate at TU Delft, later pursuing a master's in Robotics focused on drones. While at TU Delft, he joined Team Epoch—the university's award-winning machine learning team—where he worked alongside Iggy and Kenzo on advanced computer vision projects, ranging from medical to geological imaging.</p>
+                <p>His vision for InstantVision is to make computer vision as easy as possible. Just tell the team what you want to detect, maybe upload an example, and they'll handle the rest—delivering a custom computer vision model tailored to your needs, whether that's detecting dogs at home or meteors in the sky.</p>
             `
         },
         2: {
