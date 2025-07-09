@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         },
         3: {
-            name: "Kenzo",
-            email: "kenzo@visionagent.ai",
-            linkedin: "https://linkedin.com/in/kenzo-placeholder",
+            name: "Kenzo Heijman",
+            email: "kenzoheijman@hotmail.com",
+            linkedin: "https://www.linkedin.com/in/kenzo-h-6253411a4/",
             story: `
-                <p>[Placeholder for Kenzo's story - TU Delft background, AI university team experience, CPO role, product vision]</p>
-                <p>[Add details about Kenzo's product development experience and vision for user experience]</p>
-                <p>[Personal interests and background information]</p>
+                <p>Kenzo studied Computer Science and Engineering at the TU Delft, and voulunteerd at the universities' AI team (Team Epoch) during the last year.</p>
+                <p>He also has epxierience working as a  Machine Learning Engineer at a Dutch health insurance agency, as well as spearheading many projects during his time at Epoch.</p>
+                <p>He is active in Dutch politics, likes to play chess and occasionally does bouldering.</p>
             `
         }
     };
