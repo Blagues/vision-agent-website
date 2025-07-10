@@ -80,6 +80,11 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .founder-photo img {
@@ -165,10 +170,27 @@ body {
     top: 15px;
     cursor: pointer;
     z-index: 1001;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
 }
 
 .close:hover {
     color: #FF4500;
+    background-color: rgba(255, 69, 0, 0.1);
+}
+
+.close:active {
+    background-color: rgba(255, 69, 0, 0.2);
 }
 
 .modal-body {
@@ -212,11 +234,12 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        padding: 30px 20px;
+        padding: 20px 15px;
     }
     
     .vision-content p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
     }
     
     .founders {
@@ -232,6 +255,7 @@ body {
     .founder-photo {
         width: 150px;
         height: 170px;
+        border-width: 2px;
     }
     
     .founder-photo img {
@@ -241,16 +265,98 @@ body {
         object-position: center;
     }
     
+    .founder h3 {
+        font-size: 1.2rem;
+    }
+    
+    .founder p {
+        font-size: 0.9rem;
+    }
+    
+    .background-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
     .separator {
-        margin: 3rem 0;
+        margin: 2.5rem 0;
     }
     
     .modal-content {
         width: 95%;
-        margin: 10% auto;
+        margin: 5% auto;
+        max-height: 90vh;
+        overflow-y: auto;
     }
     
     .modal-body {
-        padding: 30px 20px;
+        padding: 25px 20px;
+    }
+    
+    .modal-body h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .close {
+        font-size: 24px;
+        right: 15px;
+        top: 10px;
+    }
+    
+    .logo {
+        max-width: 150px;
+    }
+    
+    .footer {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px 10px;
+    }
+    
+    .vision-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .founder-photo {
+        width: 130px;
+        height: 150px;
+    }
+    
+    .modal-content {
+        width: 98%;
+        margin: 2% auto;
+        border-radius: 8px;
+    }
+    
+    .modal-body {
+        padding: 20px 15px;
+    }
+    
+    .modal-body h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-body p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+    
+    .logo {
+        max-width: 120px;
     }
 }

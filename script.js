@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Founder stories data
     const founderStories = {
         1: {
-            name: "Felipe",
+            name: "Felipe Bononi Bello",
             email: "fbononibello@gmail.com",
             linkedin: "https://www.linkedin.com/in/felipe-bononi-bello-6a8362201/",
             story: `
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         },
         2: {
-            name: "Ignace",
+            name: "Ignace Konig",
             email: "sappie.konig@gmail.com",
             linkedin: "https://www.linkedin.com/in/ignace-konig-52b965205/",
             story: `
@@ -44,41 +44,88 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // Add click event listeners to founder photos
+    // Function to open modal
+    function openModal(founderId) {
+        const founder = founderStories[founderId];
+        if (founder) {
+            modalName.textContent = founder.name;
+            modalStory.innerHTML = founder.story + `
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:${founder.email}">${founder.email}</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="${founder.linkedin}" target="_blank" rel="noopener noreferrer">View Profile</a></p>
+                </div>
+            `;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    }
+
+    // Function to close modal
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    // Add both click and touch event listeners to founder photos
     founderPhotos.forEach(photo => {
-        photo.addEventListener('click', function() {
-            const founderId = this.getAttribute('data-founder');
-            const founder = founderStories[founderId];
-            
-            if (founder) {
-                modalName.textContent = founder.name;
-                modalStory.innerHTML = founder.story + `
-                    <div class="contact-info">
-                        <p><strong>Email:</strong> <a href="mailto:${founder.email}">${founder.email}</a></p>
-                        <p><strong>LinkedIn:</strong> <a href="${founder.linkedin}" target="_blank" rel="noopener noreferrer">View Profile</a></p>
-                    </div>
-                `;
-                modal.style.display = 'block';
+        const founderId = photo.getAttribute('data-founder');
+        
+        // Handle click events
+        photo.addEventListener('click', function(e) {
+            e.preventDefault();
+            openModal(founderId);
+        });
+        
+        // Handle touch events for better mobile support
+        photo.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            openModal(founderId);
+        });
+        
+        // Improve accessibility
+        photo.setAttribute('tabindex', '0');
+        photo.setAttribute('role', 'button');
+        photo.setAttribute('aria-label', `View ${founderStories[founderId]?.name || 'founder'} profile`);
+        
+        // Handle keyboard navigation
+        photo.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal(founderId);
             }
         });
     });
     
     // Close modal when clicking the X
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
+    closeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeModal();
+    });
+    
+    // Handle touch events on close button
+    closeBtn.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        closeModal();
     });
     
     // Close modal when clicking outside of it
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
-            modal.style.display = 'none';
+            closeModal();
+        }
+    });
+    
+    // Handle touch events for closing modal by tapping outside
+    window.addEventListener('touchend', function(event) {
+        if (event.target === modal) {
+            closeModal();
         }
     });
     
     // Close modal with Escape key
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && modal.style.display === 'block') {
-            modal.style.display = 'none';
+            closeModal();
         }
     });
     
