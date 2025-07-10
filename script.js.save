@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+puudocument.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('founderModal');
     const modalName = document.getElementById('modalName');
     const modalStory = document.getElementById('modalStory');
@@ -12,18 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
             email: "fbononibello@gmail.com",
             linkedin: "https://www.linkedin.com/in/felipe-bononi-bello-6a8362201/",
             story: `
-                <p>My passion is making complex technology simple for people. I believe anyone should be able to add powerful computer vision to their ideas — no coding required. That's what we're building at InstantVision. If you have something you wish your camera could detect, I want to hear about it.</p>
-    
-    <p>I discovered my passion for programming as an Aerospace Engineering undergraduate at TU Delft. Afterwards, I went on to a master’s in Robotics focused on drones. While pursuing my degree, I joined Team Epoch—Delft University’s award‑winning machine learning team—collaborating with Iggy and Kenzo to tackle advanced computer vision challenges, ranging from medical to geological imaging.</p>
-    
-    <p>My view for InstantVision is to make Computer Vision as easy as possible. You tell us what you want to detect, maybe upload some example, then we take it from there. A custom Computer Vision model that suits your needs. Whether it is detecting dogs at home or meteors in the sky.</p>
-
+                <p>Felipe is passionate about making complex technology simple and accessible for everyone. At InstantVision, he believes anyone should be able to add powerful computer vision to their ideas—no coding required. If you have something you wish your camera could detect, he wants to hear about it.</p>
+                <p>Felipe discovered his love for programming as an Aerospace Engineering undergraduate at TU Delft, later pursuing a master's in Robotics focused on drones. While at TU Delft, he joined Team Epoch—the university's award-winning machine learning team—where he worked alongside Iggy and Kenzo on advanced computer vision projects, ranging from medical to geological imaging.</p>
+                <p>His vision for InstantVision is to make computer vision as easy as possible. Just tell the team what you want to detect, maybe upload an example, and they'll handle the rest—delivering a custom computer vision model tailored to your needs, whether that's detecting dogs at home or meteors in the sky.</p>
             `
         },
         2: {
             name: "Ignace",
-            email: "sappie.konig@gmail.com",
-            linkedin: "https://www.linkedin.com/in/ignace-konig-52b965205/",
+            email: "ignace@visionagent.ai",
+            linkedin: "https://linkedin.com/in/ignace-placeholder",
             story: `
 <p>I fell in love with machine learning when I was 13, because of how dramatically it increased the number of problems we could solve using code.</p>
 <p>I went on to experiment with machine learning and deep learning algorithms on my own, and led a team of students that automated invoice digitization using deep learning.</p>
@@ -36,10 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
             email: "kenzoheijman@hotmail.com",
             linkedin: "https://www.linkedin.com/in/kenzo-h-6253411a4/",
             story: `
-		<p>I like tackling big problems, and iterating over solutions until they are as close to perfect as possible</p>
-                <p>I study Computer Science and Engineering at TU Delft, and have volunteered at the university's AI team (Team Epoch) during the last year. I also have experience working as a Machine Learning Engineer at a Dutch health insurance agency, as well as having spearheaded many projects during my time at Epoch.</p>
-                <p>I'm deeply interested in the development of autonomous systems and agents, believing they enable people to focus their full attention on solving meta-problems rather than getting bogged down in every small detail.</p>
-                <p>On the personal side, im active in European politics and like to play chess.</p>
+                <p>Kenzo studied Computer Science and Engineering at TU Delft, and volunteered at the university's AI team (Team Epoch) during his final year.</p>
+                <p>He has experience working as a Machine Learning Engineer at a Dutch health insurance agency, as well as spearheading many projects during his time at Epoch.</p>
+                <p>He is deeply interested in the development of autonomous systems and agents, believing they enable people to focus their full attention on solving meta-problems rather than getting bogged down in every small detail.</p>
+                <p>He is active in Dutch politics, likes to play chess and occasionally does bouldering.</p>
             `
         }
     };
